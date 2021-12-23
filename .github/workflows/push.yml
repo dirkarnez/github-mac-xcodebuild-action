@@ -1,0 +1,13 @@
+name: mac-xcodebuild-actions-workflow
+on: push
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: sersoft-gmbh/xcodebuild-action@v1
+        with:
+          project: TestProject.xcodeproj
+          scheme: TestProject
+          destination: platform=macOS
+          action: test
