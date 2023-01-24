@@ -4,10 +4,10 @@ jobs:
   test:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: sersoft-gmbh/xcodebuild-action@v1
         with:
           project: TestProject.xcodeproj
           scheme: TestProject
-          destination: platform=macOS
+          destination: platform=iOS
           action: test
